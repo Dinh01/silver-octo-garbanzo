@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/slide.css">
+    <title>Online Autoverkauf</title>
+
+</head>
+  
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<main>
+	<article >
+	<div class="article2">
+	<h1><font size="8">Online Autoverkauf</font></h1>
+	<p class="p2">Bugatti Chiron 2,998,000€ <p>
+	<p class="p2">Audi R8 140,000€ <p>
+	<p class="p2">Lamborghini Centenario 1,750,000€ <p>
+	</article>
+	</div>
+	
+	<br>
+	
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="lambo/lambo.jpg" style="width:100%">
+  <div class="text">Lamborghini Centenario</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="r8/r8.jpg" style="width:100%">
+  <div class="text">Audi R8</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="bugatti/bugatti1.jpg" style="width:100%">
+  <div class="text">Bugatti Chiron</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+	
+	<h2>Weitere Informationen zum Wagen</h2>
+	<hr class="hr4">
+	<br>
+	<div class="Informationenlinks">
+	 <nav>
+		<ul>
+       <li><a class="1" href="Bugatti%20Informationen.html">Bugatti Chiron</a></li>
+	   <li><a class="2" href="lambo.html">Lamborghini Centenario</a></li>
+	   <li><a class="3" href="Audi%20r8.html">Audi R8</a></li>
+	   </ul>
+	 </nav>
+	 </div>
+	<br>
+	<hr class="hr4">
+	
+
+	<footer>
+     <a href="kontakt.html"><font size="6">Kontakt</font></a>
+	</footer>
+	
+	
+	<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
